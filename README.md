@@ -17,8 +17,15 @@ Add the following snippet to your `docker-compose.yml`
 #### POST /populate-public-holidays
 Add a "public holiday" task to every employee (part of the employee group) for the specified iso-dates (YYYY-MM-DD). Pass the dates as a json-array in the body.
 
-Returns error for an invalid payload.
+Returns error for an invalid payload.  
 Returns status 204 No Content on success.
 
-Example:
+Example:  
 `curl -X POST localhost/populate-public-holidays -H 'Content-Type: application/vnd.api+json' -d '["2025-01-01","2025-01-02"]'`
+
+### Scripts
+#### add-public-holidays
+Pass the dates as a comma-separated list. This will run the same logic as a POST to `/populate-public-holidays`. The service has to be named `admin-jobs` for this script to run!
+
+Example:  
+`mu script admin-jobs add-public-holiday 2025-01-01,2025-01-02`
