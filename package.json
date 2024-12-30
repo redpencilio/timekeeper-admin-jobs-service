@@ -1,0 +1,22 @@
+{
+  "name": "timekeeper-admin-jobs-service",
+  "version": "0.1.0",
+  "description": "Microservice to handle jobs for admins",
+  "main": "app.js",
+  "scripts": {
+    "release": "release-it --no-npm.publish"
+  },
+  "author": "redpencil <info@redpencil.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redpencilio/timekeeper-admin-jobs-service.git"
+  },
+  "devDependencies": {
+    "release-it": "^17.10.0"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0",
+    "@lblod/mu-auth-sudo": "^0.6.0"
+  }
+}

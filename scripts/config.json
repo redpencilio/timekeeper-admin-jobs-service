@@ -1,0 +1,18 @@
+{
+  "version": "0.1",
+  "scripts": [
+    {
+      "documentation": {
+        "command": "add-public-holidays",
+        "description": "Add the list of dates as public holidays to every employee",
+        "arguments": ["comma-separated-iso-dates"]
+      },
+      "environment": {
+        "image": "alpine/curl",
+        "interactive": false,
+        "script": "add-public-holidays/run.sh",
+        "join_networks": true
+      }
+    }
+  ]
+}
